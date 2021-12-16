@@ -274,7 +274,7 @@ section .title::after{
     position: relative;
     width: 350px;
     height: 280px;
-    background-color: #112;
+    background-color: #222;
     border-radius: 20px;
 }
 .services .serviseBox .icon{
@@ -434,12 +434,48 @@ section .title::after{
     content: "who with me";
 }
 .teams .carousel .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
     background: #222;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
+}
+.card::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    border-radius: 16px;
+    
+}
+.card:hover ::after{
+    background: crimson;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    width: 225px;
+    height: 200%;
+    animation: animate 4s linear infinite;
+    background: linear-gradient(#00ccff, #d400d4);
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.card .box{
+    position: relative;
+    z-index: 10;
 }
 .teams .carousel .card:hover{
     background: crimson;
