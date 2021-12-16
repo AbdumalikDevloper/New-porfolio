@@ -262,7 +262,58 @@ section .title::after{
     color:#fff;
     background: #111;
 }
-.services .title::before,
+.services{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.services .serviseBox{
+    position: relative;
+    width: 350px;
+    height: 280px;
+    background-color: #112;
+    border-radius: 20px;
+}
+.services .serviseBox .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: crimson;
+    transition: 0.3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    border-radius: 20px;
+}
+.services .serviseBox:hover .icon{
+    top: 30px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+.services .serviseBox:hover .icon i{
+    font-size: 2em;
+    transition: 0.3s linear;
+}
+.services .serviseBox .content{
+    position: relative;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+    z-index: 1;
+}
+
+
+/* .services .title::before,
 .teams .title::before{
     background: #fff;
 }
@@ -301,7 +352,7 @@ section .title::after{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
-}
+} */
 
 /* skills section styling */
 
@@ -366,13 +417,13 @@ section .title::after{
     width: 100%;
 }
 .skills-content .right .js::before{
-    width: 60%;
+    width: 77%;
 }
 .skills-content .right .css::before{
-    width: 90%;
+    width: 100%;
 }
 .skills-content .right .boostrsab::before{
-    width: 75%;
+    width: 95%;
 }
 .skills-content .right .sass::before{
     width: 100%;
@@ -576,6 +627,7 @@ section .title::after{
     align-items: center;
     justify-content: space-around;
     padding: 20px 0;
+    flex-wrap: wrap;
 }
 footer{
     background: #111;
