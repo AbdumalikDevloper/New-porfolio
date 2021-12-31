@@ -51,7 +51,7 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Abdumalik Karshiev</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+                <a class="btn-eff" href="#"><span>Hire me</span></a>
             </div>
         </div>
     </section>
@@ -273,19 +273,22 @@
                 <div class="col-md-4">
                     <div class="social-networks">
                         <a href="https://www.instagram.com/abdumalik_kharshiev" class="networks">
-                        <i class="fab fa-instagram"></i>
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/alonewolf.o7" class="networks">
+                            <i class="fab fa-instagram"></i>
                         </a>
                         <a href="https://www.youtube.com/channel/UCMGSgeIiTUCetV9MlwxwaaA" class="networks">
-                        <i class="fab fa-youtube"></i>
+                            <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="https://t.me/KHARSHIYEV_07" class="networks">
-                        <i class="fab fa-telegram"></i>
+                        <a href="https://t.me/malikoff07" class="networks">
+                            <i class="fab fa-telegram"></i>
                         </a>
                         <a href="https://github.com/qarshiyev03330777" class="networks">
-                        <i class="fab fa-github"></i>
+                            <i class="fab fa-github"></i>
                         </a>
                         <a href="https://github.com/AbdumalikDevloper" class="networks">
-                        <i class="fab fa-github"></i>
+                            <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
@@ -299,7 +302,15 @@
         <span>Created By <a href="https://abdumalikdev.netlify.app">AbdumalikDev</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
     <!-- Footer end-->
-
+    <script>
+        const btn = document.querySelector('.btn-eff');
+        btn.onmousemove = function(e){
+            const x = e.pageX - btn.offsetLeft
+            const y = e.pageY - btn.offsetTop
+            btn.style.setProperty('--x', x + 'px');
+            btn.style.setProperty('--y', y + 'px')
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

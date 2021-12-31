@@ -10,7 +10,33 @@
 html{
     scroll-behavior: smooth;
 }
-
+.btn-eff, .btn-eff1{
+    background-color: transparent!important;
+    color: crimson!important;
+    border: 2px solid crimson!important;
+    position: relative;
+    overflow: hidden;
+}
+.btn-eff span, .btn-eff1 span{
+    z-index: 1!important;
+    position: relative;
+}
+.btn-eff::before, .btn-eff1::before{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: white;
+    transition: width 0.5s, height 0.5s ;
+}
+.btn-eff:hover::before, .btn-eff1:hover::before{
+    width: 150px;
+    height: 150px;
+}
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
